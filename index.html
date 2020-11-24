@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Game</title>
+    <style>
+.class1{
+    animation: 2s animation1 alternate-reverse infinite;
+}
+        
+@keyframes animation1{
+    to{background-image: url(download.jpg);height: 700; width: 1550;}
+    from{background-image: url(images.jpg);
+    height: 700;
+width: 1550;}
+
+        }
+    </style>
+    <h3 style="text-align: center; color: rgb(19, 11, 13);"><b>CREATED BY: FATIMA IMDAD</b></h3>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="class1">
+    <header class="bg-success text-center py-1 text-white">
+        <h1 style="background-color: rgb(146, 62, 104); color: black; border: 2px solid black; border-radius: 2px;"><b><i>Typing Beater</i></b></h1>
+    </header>
+
+
+    <div style="background-color: seagreen;" id="ins-box" class="bg-success py-4 col-sm-6 my-5 mx-auto play">
+
+        <h1 style="color: red; background-color: rgb(146, 62, 104);">Instructions</h1>
+
+        <p style="background-color: pink;"><b>Type each word in the given amount of time otherwise the game will be over!</b></p>
+
+        <button class="btn btn-warning" onclick="start()">PLAY</button>
+
+    </div>
+
+    <div id="game-box" class="hide">
+
+        <div class=" bg-success text-center text-white">
+
+            <p class="pt-4">Type the given word with in 5 seconds</p>
+            <div class="text-center text-white my-5">
+                <h3>Time Left: <span id="timer">5</span></h3>
+                <h3>Score: <span id="score">0</span></h3>
+            </div>
+
+            <h1 id="word" class="py-3"></h1>
+            
+            <input class="form-control form-control-lg col-sm-6 mx-auto" type="text" placeholder="Type given word"
+                id="inp" autofocus>
+            <h4 id="result"> &nbsp;</h4>
+        </div>
+
+        <!-- <div class="text-center text-white my-5">
+            <h3>Time Left: <span id="timer">5</span></h3>
+            <h3>Score: <span id="score">0</span></h3>
+        </div> -->
+    </div>
+
+    <div id="game-over" class="bg-success py-4 col-sm-6 my-5 mx-auto text-center play hide">
+        <h1 class="text-danger pb-3">Game Over!</h1>
+        <h4 class=" pb-3">You score <span id="final-score" class="text-warning">0</span> points</h4>
+        <button class="btn btn-danger" onclick="start()">Play Again</button>
+
+
+    </div>
+
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
